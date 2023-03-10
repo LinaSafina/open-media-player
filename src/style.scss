@@ -1,0 +1,21 @@
+@import 'normalize.css';
+@import './styles/variables';
+@import './styles/global';
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.2rem;
+  min-height: 100%;
+}
+
+.promo {
+  background-color: $color-background-light;
+  padding: 40px;
+}
+
+.promo__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
