@@ -1,16 +1,31 @@
 @import '../../styles/variables';
 
-// .promo__form {
-
-// }
-
 .label {
   color: $color-background-dark;
   margin-bottom: 2rem;
 }
-.input-field {
+
+.promo__form {
+  width: 62rem;
+
+  @media screen and (max-width: 1200px) {
+    & {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    & {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}
+
+.form__inner {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .input-container {
@@ -20,6 +35,7 @@
 
 .input-field {
   position: relative;
+  width: 100%;
 }
 
 .input {
@@ -31,6 +47,7 @@
   line-height: 3.2rem;
   letter-spacing: -0.4px;
   color: $color-background-dark;
+  width: 100%;
 
   &::placeholder {
     font-weight: 300;
@@ -40,15 +57,12 @@
     letter-spacing: -0.4px;
   }
 
-  // &::after {
-  //   content: ;
-  // }
-
   &.invalid {
     border: 0.5px solid $color-error;
     padding-right: 3.8rem;
   }
 }
+
 .button {
   padding: 1.3rem 1.2rem;
   width: 9.6rem;
@@ -57,9 +71,18 @@
   border: none;
   cursor: pointer;
   transition: opacity 0.3s;
+
   &:hover,
   &:active {
     opacity: 0.6;
+  }
+  img {
+    @media screen and (max-width: 700px) {
+      & {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
   }
 }
 

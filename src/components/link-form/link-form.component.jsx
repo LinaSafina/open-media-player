@@ -28,7 +28,7 @@ const LinkForm = () => {
 
   return (
     <form className='form promo__form' onSubmit={handleSubmit}>
-      <div className='input-field'>
+      <div className='form__inner'>
         <label className='label' htmlFor='link-input'>
           Insert the link
         </label>
