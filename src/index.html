@@ -10,18 +10,20 @@
     <div class="container">
       <div class="promo">
         <div class="promo__inner">
-          <h2 class="promo__title title">
-            Play any audio sources directly in the browser!
-          </h2>
-          <p class="promo__description"></p>
-          <form class="form">
+          <div class="promo__description">
+            <h2 class="promo__title title">
+              Play any audio sources directly in the browser!
+            </h2>
+            <p class="promo__text">Without any restrictions for free</p>
+            <span class="promo__agreement"
+              >By uploading the audio file, you agree to our</span
+            >
+            <a class="promo__link" href="#">Terms of Service.</a>
+          </div>
+          <form class="form promo__form">
             <label for="">Insert the link</label>
             <input type="url" />
           </form>
-          <span class="promo__agreement"
-            >By uploading the audio file, you agree to our</span
-          >
-          <a class="promo__link" href="#">Terms of Service.</a>
         </div>
       </div>
       <div class="pricing">
@@ -37,16 +39,14 @@
                 for print samples.
               </p>
             </div>
-            <img
-              class="pricing__image"
-              src="./assets/illustration.png"
-              alt="how open media works"
-            />
+            <div class="pricing__image" />
           </section>
           <section class="pricing__technical-requirements">
             <h3 class="pricing__subtitle">Technical requirements</h3>
             <ul class="pricing__list">
-              <li class="pricing__list-item">Own server</li>
+              <li class="pricing__list-item pricing__list-item_active">
+                Own server
+              </li>
               <li class="pricing__list-item">Amazon Instance</li>
             </ul>
             <div class="pricing__table">

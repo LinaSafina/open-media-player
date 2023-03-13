@@ -1,10 +1,11 @@
-@import './_variables.scss';
+@import './_variables';
+@import './fonts';
 
-// *,
-// *::after,
-// *::before {
-//   box-sizing: border-box;
-// }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 10px;
@@ -23,3 +24,49 @@ body {
   background-color: $color-background-dark;
   height: 100%;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+// @media screen and (max-width: 1200px) {
+//   html {
+//     font-size: 8px;
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   html {
+//     font-size: 7px;
+//   }
+// }
+
+// @media screen and (max-width: 450px) {
+//   html {
+//     font-size: 6px;
+//   }
+// }
