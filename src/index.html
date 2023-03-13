@@ -15,15 +15,15 @@
               Play any audio sources directly in the browser!
             </h2>
             <p class="promo__text">Without any restrictions for free</p>
-            <span class="promo__agreement"
-              >By uploading the audio file, you agree to our</span
-            >
-            <a class="promo__link" href="#">Terms of Service.</a>
+            <p class="promo__agreement">
+              By uploading the audio file, you agree to our
+              <a class="promo__link" href="#" target="_blank"
+                >Terms of Service.</a
+              >
+            </p>
           </div>
-          <form class="form promo__form">
-            <label for="">Insert the link</label>
-            <input type="url" />
-          </form>
+
+          <div id="audio-player"></div>
         </div>
       </div>
       <div class="pricing">
@@ -49,7 +49,7 @@
               </li>
               <li class="pricing__list-item">Amazon Instance</li>
             </ul>
-            <div class="pricing__table">
+            <div class="pricing__table pricing__table_shown">
               <div class="pricing__table-row">
                 <div class="pricing__table-cell">OS + apps</div>
                 <div class="pricing__table-cell">
@@ -75,18 +75,14 @@
                 <div class="pricing__table-cell">GPU: NVidia only 2Gb+</div>
               </div>
             </div>
-            <!-- <div class="pricing__table">
+            <div class="pricing__table">
               <div class="pricing__table-row">
                 <div class="pricing__table-cell">Instance</div>
-                <div class="pricing__table-cell">
-                  g4dn.xlarge
-                </div>
+                <div class="pricing__table-cell">g4dn.xlarge</div>
               </div>
               <div class="pricing__table-row">
                 <div class="pricing__table-cell">GPU</div>
-                <div class="pricing__table-cell">
-                  1
-                </div>
+                <div class="pricing__table-cell">1</div>
               </div>
               <div class="pricing__table-row">
                 <div class="pricing__table-cell">vCPUs</div>
@@ -100,7 +96,7 @@
                 <div class="pricing__table-cell">Storage</div>
                 <div class="pricing__table-cell">125 GB</div>
               </div>
-            </div> -->
+            </div>
           </section>
         </div>
       </div>

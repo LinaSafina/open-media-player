@@ -1,0 +1,148 @@
+@import '../../styles/variables';
+
+.back-button {
+  background-color: transparent;
+  border: none;
+  color: $color-background-dark;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  letter-spacing: -0.4px;
+  cursor: pointer;
+}
+
+.audio-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 19.8rem;
+  padding: 2rem;
+  background-color: $color-link-inactive;
+}
+
+.play-pause-container {
+  width: 100%;
+  height: 4rem;
+}
+
+.play-pause-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-text-light;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.progress-container {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  height: 1.2rem;
+}
+
+.progress-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $color-progress-bar;
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+
+  &::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+
+    height: 0.2rem;
+  }
+
+  &::-moz-range-track {
+    background-color: $color-progress-bar;
+    height: 0.2rem;
+  }
+
+  &::-moz-range-progress {
+    background-color: $color-input-field;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -0.5rem;
+    width: 1.6rem;
+    height: 1.2rem;
+    background: $color-input-field;
+    color: $color-input-field;
+    border-radius: 0.6rem;
+  }
+
+  &::-moz-range-thumb {
+    margin-top: -0.5rem;
+    width: 1.6rem;
+    height: 1.2rem;
+    background: $color-input-field;
+    border-radius: 0.6rem;
+  }
+}
+
+.time-volume-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 4.5rem;
+}
+
+.time-display {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.3px;
+  color: $color-background-dark;
+}
+
+.volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $color-input-field;
+  cursor: pointer;
+  width: 25.2rem;
+  margin: 0;
+
+  &::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 0.2rem;
+  }
+
+  &::-moz-range-track {
+    background-color: $color-progress-bar;
+    height: 0.2rem;
+  }
+
+  &::-moz-range-progress {
+    background-color: $color-text-dark;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -0.5rem;
+    width: 1.6rem;
+    height: 1.2rem;
+    background: $color-text-dark;
+    color: $color-text-dark;
+  }
+
+  &::-moz-range-thumb {
+    margin-top: -0.5rem;
+    width: 1.6rem;
+    height: 1.2rem;
+    background: $color-input-field;
+  }
+}

@@ -1,0 +1,80 @@
+@import '../../styles/variables';
+
+// .promo__form {
+
+// }
+
+.label {
+  color: $color-background-dark;
+  margin-bottom: 2rem;
+}
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  position: relative;
+}
+
+.input {
+  padding: 3.2rem 1.6rem;
+  background-color: $color-input-field;
+  border: none;
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  letter-spacing: -0.4px;
+  color: $color-background-dark;
+
+  &::placeholder {
+    font-weight: 300;
+    color: $color-placeholder;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    letter-spacing: -0.4px;
+  }
+
+  // &::after {
+  //   content: ;
+  // }
+
+  &.invalid {
+    border: 0.5px solid $color-error;
+    padding-right: 3.8rem;
+  }
+}
+.button {
+  padding: 1.3rem 1.2rem;
+  width: 9.6rem;
+  height: 9.6rem;
+  background-color: $color-brand;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  &:hover,
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.error-icon {
+  position: absolute;
+  margin-right: 1.8rem;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+.error-message {
+  margin-top: 0.8rem;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: $color-error;
+}
