@@ -62,7 +62,7 @@ const AudioPlayer = () => {
       <div className='audio-player'>
         <audio
           ref={audioRef}
-          src={'../../assets/town-10169.mp3'}
+          src={audioSrc}
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
           onTimeUpdate={handleTimeUpdate}
