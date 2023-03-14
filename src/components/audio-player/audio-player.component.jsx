@@ -13,35 +13,41 @@ const AudioPlayer = () => {
   const { audioSrc, setAudioSrc, setIsAudioSrcFieldTouched } =
     useContext(AudioContext);
 
-  function togglePlay() {
+  const togglePlay = () => {
     if (isPlaying) {
       audioRef.current.pause();
     } else {
       audioRef.current.play();
     }
     setIsPlaying(!isPlaying);
-  }
+  };
 
-  function handleVolumeChange(event) {
+  const handleVolumeChange = (event) => {
     const value = parseFloat(event.target.value);
     setVolume(value);
     audioRef.current.volume = value;
-  }
+  };
 
-  function handleProgressChange(event) {
+  const handleProgressChange = (event) => {
     const value = parseFloat(event.target.value);
     setProgress(value);
     audioRef.current.currentTime = value;
-  }
+  };
 
-  function handleTimeUpdate() {
+  const handleTimeUpdate = () => {
     setProgress(audioRef.current.currentTime);
-  }
+  };
 
-  function handleMovingBack() {
+  const handleMovingBack = () => {
     setAudioSrc('');
     setIsAudioSrcFieldTouched(false);
-  }
+  };
+
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+  };
 
   useEffect(() => {
     audioRef.current.volume = volume;
@@ -49,7 +55,7 @@ const AudioPlayer = () => {
   }, [audioSrc]);
 
   return (
-    <>
+    <div className='audio-player-container'>
       <button className='back-button' onClick={handleMovingBack}>
         ← Back
       </button>
@@ -96,14 +102,8 @@ const AudioPlayer = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
-
-function formatTime(time) {
-  const minutes = Math.floor(time / 60);
-  const seconds = Math.floor(time % 60);
-  return `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
-}
 
 export default AudioPlayer;

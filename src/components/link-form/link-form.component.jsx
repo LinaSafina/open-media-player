@@ -15,16 +15,16 @@ const LinkForm = () => {
     setIsAudioSrcFieldTouched,
   } = audioCtx;
 
-  function handleInputChange(event) {
+  const handleInputChange = (event) => {
     const inputLink = event.target.value;
     setAudioSrc(inputLink);
-  }
+  };
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
     checkIsLinkValid(audioSrc);
     setIsAudioSrcFieldTouched(true);
-  }
+  };
 
   return (
     <form className='form promo__form' onSubmit={handleSubmit}>
