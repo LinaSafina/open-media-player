@@ -33,7 +33,7 @@
 
   @media screen and (max-width: 420px) {
     & {
-      padding: 20px 12px;
+      padding: 2rem 1.2rem;
     }
   }
 }
@@ -124,7 +124,7 @@
 
   @media screen and (max-width: 420px) {
     & {
-      padding: 40px 12px;
+      padding: 4rem 1.2rem;
     }
   }
 }
@@ -203,7 +203,7 @@
   &::after {
     content: '';
     width: 100%;
-    height: 1px;
+    height: 0.1rem;
     background-color: $color-background-light;
     position: absolute;
     bottom: -3px;
@@ -230,6 +230,6 @@
 .pricing__table-row {
   display: grid;
   grid-template-columns: 25rem auto;
-  padding: 12px 0;
+  padding: 1.2rem 0;
   border-bottom: 1px solid rgba(207, 211, 214, 0.1);
 }

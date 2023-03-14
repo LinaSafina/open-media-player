@@ -1,9 +1,9 @@
 @import '../../styles/variables';
 
 @function makelongshadow($color, $size) {
-  $val: 5px 0 0 $size $color;
+  $val: 0 0 0 $size $color;
 
-  @for $i from 6 through 580px {
+  @for $i from 0 through 580 {
     $val: #{$val}, #{$i}px 0 0 $size #{$color};
   }
 
@@ -72,10 +72,10 @@
 
 .progress-container {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 5rem;
   display: flex;
   align-items: center;
-  height: 1.2rem;
+  height: 4rem;
 }
 
 .progress-bar {
@@ -178,7 +178,7 @@
     height: 1.2rem;
     background: $color-text-dark;
     color: $color-text-dark;
-    box-shadow: makelongshadow($color-input-field, -0.4rem);
+    box-shadow: makelongshadow($color-input-field, -0.5rem);
   }
 
   &::-moz-range-thumb {
